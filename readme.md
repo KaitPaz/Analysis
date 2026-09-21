@@ -1,79 +1,58 @@
-# 📊 Unit 2: Analysis — Algorithms, Complexity & Data Structures
+# 📊 Algorithm Analysis & Data Structures
 
-**Coursework exploring how algorithms actually behave as problems scale —
-and how to prove it, not just claim it.**
+**Digging into how algorithms actually behave as problems scale — and using
+that understanding to make real design decisions, not just pick a
+data structure out of habit.**
 
-This repo collects the labs and problem sets from Unit 2 of my CS
-coursework: reasoning about time and space complexity, comparing search and
-sorting strategies both empirically and theoretically, and using that
-analysis to justify real data structure and optimization decisions rather
-than picking one by habit.
+This repo is where I worked through algorithmic complexity from the ground
+up: reasoning about time and space growth, comparing search and sorting
+strategies both theoretically and hands-on, hunting down a subtly broken
+sort, and using everything from that analysis to justify concrete
+optimization and data structure choices.
 
 ---
 
-## 🧭 What's inside
-
-### Module 1 — Time and Space
-*Lectures: Time & space complexity · Linear vs. binary search*
-
-Foundations for everything after it: how to reason about an algorithm's
-growth rate independent of hardware, and a first head-to-head comparison —
-linear vs. binary search — as a concrete case study in why complexity class
-matters more than raw speed on any one input.
-
-- 🧪 **Lab 2.1 — Exploring time and space complexity:** measuring and
-  reasoning about how runtime and memory use scale with input size.
-- 📝 **Problem Set 1**
-
-### Module 2 — Sorting Algorithms
-*Lectures: Iterative sorting algorithms · Recursive sorting algorithms*
-
-Moves from analyzing complexity to producing it: implementing and comparing
-sorting approaches, iterative and recursive, and debugging a sort that
-looks correct until it isn't.
-
-- 🧪 **Lab 2.2 — Buggy sort & data structure practice:** diagnosing and
-  fixing a flawed sorting implementation, paired with hands-on data
-  structure exercises.
-- 📝 **Problem Set 2**
-
-### Module 3 — Making Decisions About Data Structures
-*Lectures: Lists, sets & maps · Optimization techniques*
-
-Where the analysis pays off: choosing the right data structure for the
-job — list, set, or map — based on the access patterns and complexity
-trade-offs each one implies, then applying optimization techniques to bring
-a working solution up to speed.
-
-- 🧪 **Lab 2.3 — Optimizing solutions:** taking a functioning but
-  inefficient solution and improving it using structural and algorithmic
-  optimizations.
-- 📝 **Problem Set 3**
-
 ## 🎯 Skills demonstrated
 
-| Skill | Where |
+| Skill | What it looks like here |
 |---|---|
-| **Big-O reasoning** | Analyzing time/space complexity independent of implementation details |
-| **Algorithm comparison** | Linear vs. binary search; iterative vs. recursive sorting |
-| **Debugging** | Diagnosing a subtly broken sort in Lab 2.2 |
-| **Data structure selection** | Choosing between lists, sets, and maps based on complexity trade-offs |
-| **Optimization** | Applying targeted techniques to improve an existing solution's efficiency |
+| **Big-O reasoning** | Analyzing how runtime and memory scale with input size, independent of any one implementation |
+| **Algorithm comparison** | Linear vs. binary search, and iterative vs. recursive sorting — trading off simplicity, speed, and space |
+| **Debugging** | Tracking down a sorting bug that looked correct on the surface but broke on real input |
+| **Data structure selection** | Choosing between lists, sets, and maps based on what each one actually costs for the access pattern at hand |
+| **Optimization** | Taking a working-but-slow solution and speeding it up with targeted structural and algorithmic changes |
+
+## 🧭 What's inside
+
+### Time & space complexity
+Where it starts: building intuition for how an algorithm's cost grows with
+input size, then putting that intuition to the test with a direct
+comparison — linear search versus binary search — as a concrete example of
+why complexity class matters more than raw speed on any single input.
+
+### Sorting algorithms
+Moving from analyzing complexity to producing it. I implemented and
+compared sorting approaches from both the iterative and recursive angle,
+then dug into a sort that looked fine until it wasn't — chasing down the
+actual bug rather than papering over the symptom.
+
+### Choosing and optimizing data structures
+Where the analysis pays off. I compared lists, sets, and maps against the
+access patterns they'd actually see, then took a working solution and
+optimized it — applying what the complexity analysis predicted would
+matter, and checking that it did.
 
 ## 📂 Structure
 
 ```
-unit2-analysis/
-├── lab-2.1-time-and-space/
-├── problem-set-1/
-├── lab-2.2-buggy-sort/
-├── problem-set-2/
-├── lab-2.3-optimization/
-└── problem-set-3/
+algorithm-analysis/
+├── complexity/          # Time/space complexity exploration, linear vs. binary search
+├── sorting/              # Iterative & recursive sorts, debugging exercise
+└── optimization/         # Data structure selection & solution optimization
 ```
 
 ## 📄 Notes
 
-Completed individually as part of coursework. Shared here to document the
-progression from complexity analysis → algorithm implementation → applied
-data structure and optimization decisions.
+A self-directed deep dive into algorithmic thinking — the goal wasn't just
+to get working code, but to understand *why* one approach beats another,
+and to be able to back that up with actual analysis.
